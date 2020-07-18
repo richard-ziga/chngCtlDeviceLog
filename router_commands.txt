@@ -1,0 +1,13 @@
+access-list 2010 remark This is the bulk-10 queue  v1.1
+access-list 2010 remark This is a GLOBAL acl never to be modified
+access-list 2010 remark Printer application
+access-list 2010 permit tcp any any eq lpd
+access-list 2010 permit tcp any eq lpd any
+access-list 2010 remark NAV app
+access-list 2010 permit udp any eq 38293 any
+access-list 2010 permit udp any any eq 38293
+interface Loopback99
+ ip access-group 2010 in
+ ip address 10.11.0.99 255.255.255.255
+ no ip proxy-arp
+ ip flow ingress
