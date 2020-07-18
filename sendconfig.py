@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# This code was developed by Richard Ziga 2019
 # THIS HELPS RUN THE SCRIPT ON PYTHON 2 OR 3
 from __future__ import absolute_import, division, print_function
 
